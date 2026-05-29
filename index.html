@@ -1462,7 +1462,8 @@
               <h3>Start Your Project</h3>
               <p>Share a few details about your vision and we'll put together a tailored proposal for you.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form action="https://api.web3forms.com/submit" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                 <div class="row gy-4">
 
                   <div class="col-md-6">
@@ -1511,7 +1512,8 @@
           <div class="col-lg-6">
             <h4>Stay in the Loop</h4>
             <p>Subscribe to get design tips, agency news, and updates on new Forsyth projects — straight to your inbox.</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <form action="https://api.web3forms.com/submit" method="post" class="php-email-form">
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
               <div class="newsletter-form"><input type="email" name="email" placeholder="Your email address"><input type="submit" value="Subscribe"></div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>

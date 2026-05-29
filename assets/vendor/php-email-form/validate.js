@@ -64,11 +64,21 @@
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      let isSuccess = false;
+      let errorMessage = '';
+      try {
+        let json = JSON.parse(data);
+        isSuccess = json.success;
+        errorMessage = json.message;
+      } catch (e) {
+        isSuccess = (data.trim() == 'OK');
+      }
+
+      if (isSuccess) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(errorMessage ? errorMessage : (data ? data : 'Form submission failed and no error message returned from: ' + action)); 
       }
     })
     .catch((error) => {
