@@ -711,6 +711,35 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# WhatsApp Sticky Button
+--------------------------------------------------------------*/
+.whatsapp-btn {
+  position: fixed;
+  right: 15px;
+  bottom: 65px;
+  z-index: 99999;
+  background-color: #25d366;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.whatsapp-btn i {
+  font-size: 28px;
+  line-height: 0;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc5a;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
